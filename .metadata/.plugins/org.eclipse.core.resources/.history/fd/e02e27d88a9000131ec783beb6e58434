@@ -1,0 +1,39 @@
+package com.officiallom.StaffTrials;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	
+	@Override
+	public void onEnable() {
+		getLogger().info("Developed by EliteGameDev");
+	}
+	
+	@Override
+	public void onDisable() {
+		getLogger().info("Developed by EliteGameDev");
+	}
+	
+	@Override
+	public boolean onCommand(CommandSender sender, Command command,
+			String label, String[] args) {
+		Player player = (Player) sender;
+		if (sender instanceof Player) {
+			if (player.hasPermission("st.use")) {
+				if (label.equalsIgnoreCase("st")) {
+					if (args.length == 0) {
+						player.sendMessage(ChatColor.RED + "Usage: /st <add> <player> [rank]");
+					} else if() {
+						
+					}
+				}
+			}
+		}
+		return true;
+	}
+	
+}
